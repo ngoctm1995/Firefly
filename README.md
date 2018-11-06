@@ -1,4 +1,4 @@
-# FireflyTechnology
+# Firefly-Technology
 Trang thông tin dành cho tín đồ công nghệ
 > Trao đổi về khoa học, công nghệ, thủ thuật điện thoại, máy tính, camera, đồ gia dụng và âm thanh.
 > Cập nhật những thông tin công nghệ mới nhất trên thế giới.
