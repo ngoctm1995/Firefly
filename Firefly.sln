@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firefly", "Firefly\Firefly.csproj", "{CBBC67D7-0D6D-45CD-9077-F2EF117A8F88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{E0003EC0-F739-4692-A2E1-F54C8896C18C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBBC67D7-0D6D-45CD-9077-F2EF117A8F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBBC67D7-0D6D-45CD-9077-F2EF117A8F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBBC67D7-0D6D-45CD-9077-F2EF117A8F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBBC67D7-0D6D-45CD-9077-F2EF117A8F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0003EC0-F739-4692-A2E1-F54C8896C18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0003EC0-F739-4692-A2E1-F54C8896C18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0003EC0-F739-4692-A2E1-F54C8896C18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0003EC0-F739-4692-A2E1-F54C8896C18C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA4BAB2C-B003-43EC-85BE-0F5A5A0BFAB1}
+	EndGlobalSection
+EndGlobal
