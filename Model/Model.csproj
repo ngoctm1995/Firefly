@@ -51,7 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dao\UserDao.cs" />
-    <Compile Include="EF\FireflyDbConText.cs" />
+    <Compile Include="EF\NewsArticle.cs" />
+    <Compile Include="EF\NewsArticleCategory.cs" />
+    <Compile Include="EF\NewsCategory.cs" />
+    <Compile Include="EF\TechFirefly.cs" />
     <Compile Include="EF\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

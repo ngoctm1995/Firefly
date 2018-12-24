@@ -84,13 +84,10 @@ D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\Microsoft.AI.DependencyCollecto
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\Microsoft.AI.WindowsServer.xml
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\Microsoft.AI.Web.xml
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\obj\Debug\Firefly.csprojAssemblyReference.cache
-D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\obj\Debug\Firefly.csproj.CoreCompileInputs.cache
-D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\obj\Debug\Firefly.csproj.CopyComplete
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\obj\Debug\Firefly.dll
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\obj\Debug\Firefly.pdb
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\Model.dll
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\Model.pdb
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\EntityFramework.dll
-D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\Model.dll.config
 D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\bin\EntityFramework.xml
+D:\DH-KHTN\Firefly_DuAn_CNPM\Firefly\Firefly\obj\Debug\Firefly.csprojResolveAssemblyReference.cache

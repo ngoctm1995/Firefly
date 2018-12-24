@@ -1,14 +1,18 @@
 ﻿using Model.EF;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Model.Dao
 {
     class UserDao
     {
-        FireflyDbConText db = null;
+        TechFireflyDataContext db = null;
         public UserDao()
         {
-            db = new FireflyDbConText();
+            db = new TechFireflyDataContext();
         }
         public long Insert(User entity)
         {
@@ -19,7 +23,7 @@ namespace Model.Dao
         public bool Login(string userName, string passWord)
         {
             var result = db.Users.Count(x => x.UserName == userName && x.Password == passWord);
-            if(result > 0)
+            if (result > 0)
             {
                 return true;
             }
