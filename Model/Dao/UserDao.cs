@@ -3,18 +3,22 @@ using System.Linq;
 
 namespace Model.Dao
 {
-    class UserDao
+    public class UserDao
     {
-        FireflyDbConText db = null;
+        TechFireFlyDbContext db = null;
         public UserDao()
         {
-            db = new FireflyDbConText();
+            db = new TechFireFlyDbContext();
         }
         public long Insert(User entity)
         {
             db.Users.Add(entity);
             db.SaveChanges();
             return entity.ID;
+        }
+        public User GetById(string UserName)
+        {
+            return db.Users.SingleOrDefault(x => x.UserName == UserName);
         }
         public bool Login(string userName, string passWord)
         {
