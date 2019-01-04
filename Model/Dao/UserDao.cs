@@ -1,5 +1,7 @@
 ﻿using Model.EF;
+using System.Collections.Generic;
 using System.Linq;
+using PagedList;
 
 namespace Model.Dao
 {
@@ -15,6 +17,10 @@ namespace Model.Dao
             db.Users.Add(entity);
             db.SaveChanges();
             return entity.ID;
+        }
+        public IEnumerable<User> ListAllPaging(int page, int pageSize)
+        {
+            return db.Users.OrderByDescending(x => x.Name).ToPagedList(page, pageSize);
         }
         public User GetById(string UserName)
         {
