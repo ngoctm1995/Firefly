@@ -90,6 +90,14 @@ namespace Model.EF
             modelBuilder.Entity<User>()
                 .Property(e => e.Password)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.ModifiedBy)
+                .IsUnicode(false);
         }
     }
 }
