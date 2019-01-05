@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -15,9 +15,11 @@ namespace Model.EF
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Số danh mục")]
         public int id { get; set; }
 
         [Required]
+        [Display(Name = "Tên danh mục")]
         [StringLength(255)]
         public string name { get; set; }
 
