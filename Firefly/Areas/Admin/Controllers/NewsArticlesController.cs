@@ -13,11 +13,10 @@ namespace Firefly.Areas.Admin.Controllers
         // GET: Admin/NewsArticles
         public ActionResult Index(string seachString, int page = 1, int pageSize = 10)
         {
-            //var articles = new NewsArticles();
-            //var model = articles.ListAllPaging(seachString, page, pageSize);
-            //ViewBag.SearchString = seachString;
-            //return View(model);
-            return View();
+            var articles = new NewsArticles();
+            var model = articles.ListAllPaging(seachString, page, pageSize);
+            ViewBag.SearchString = seachString;
+            return View(model);
         }
 
         //[HttpGet]
