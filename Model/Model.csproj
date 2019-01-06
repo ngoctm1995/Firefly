@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\NewsArticles.cs" />
     <Compile Include="Dao\NewsCategories.cs" />
     <Compile Include="Dao\UserDao.cs" />
     <Compile Include="EF\NewsArticle.cs" />

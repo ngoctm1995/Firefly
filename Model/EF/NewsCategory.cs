@@ -6,15 +6,15 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("NewsCategory")]
     public partial class NewsCategory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NewsCategory()
         {
-            NewsArticleCategories = new HashSet<NewsArticleCategory>();
+            NewsArticleCategory = new HashSet<NewsArticleCategory>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Số danh mục")]
         public int id { get; set; }
 
@@ -24,6 +24,6 @@
         public string name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NewsArticleCategory> NewsArticleCategories { get; set; }
+        public virtual ICollection<NewsArticleCategory> NewsArticleCategory { get; set; }
     }
 }

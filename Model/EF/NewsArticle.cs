@@ -6,15 +6,15 @@ namespace Model.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("NewsArticle")]
     public partial class NewsArticle
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NewsArticle()
         {
-            NewsArticleCategories = new HashSet<NewsArticleCategory>();
+            NewsArticleCategory = new HashSet<NewsArticleCategory>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
         [Required]
@@ -24,7 +24,6 @@ namespace Model.EF
         [Column(TypeName = "text")]
         public string extract { get; set; }
 
-        [Required]
         [StringLength(45)]
         public string encoding { get; set; }
 
@@ -40,7 +39,6 @@ namespace Model.EF
         [StringLength(255)]
         public string source { get; set; }
 
-        [Required]
         [StringLength(20)]
         public string state { get; set; }
 
@@ -65,7 +63,6 @@ namespace Model.EF
 
         public int? priority { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string format { get; set; }
 
@@ -80,6 +77,6 @@ namespace Model.EF
         public string photoURL { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NewsArticleCategory> NewsArticleCategories { get; set; }
+        public virtual ICollection<NewsArticleCategory> NewsArticleCategory { get; set; }
     }
 }
