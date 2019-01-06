@@ -6,6 +6,7 @@ namespace Model.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("NewsArticleCategory")]
     public partial class NewsArticleCategory
     {
         public int id { get; set; }
@@ -14,8 +15,8 @@ namespace Model.EF
 
         public int newsArticleID { get; set; }
 
-        public virtual NewsCategory NewsCategory { get; set; }
-
         public virtual NewsArticle NewsArticle { get; set; }
+
+        public virtual NewsCategory NewsCategory { get; set; }
     }
 }

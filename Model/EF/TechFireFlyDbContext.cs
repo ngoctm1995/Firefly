@@ -12,8 +12,8 @@ namespace Model.EF
         {
         }
 
-        public virtual DbSet<NewsArticleCategory> NewsArticleCategories { get; set; }
         public virtual DbSet<NewsArticle> NewsArticles { get; set; }
+        public virtual DbSet<NewsArticleCategory> NewsArticleCategories { get; set; }
         public virtual DbSet<NewsCategory> NewsCategories { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
