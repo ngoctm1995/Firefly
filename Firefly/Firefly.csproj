@@ -170,6 +170,7 @@
     <Compile Include="Areas\Admin\Controllers\NewsArticlesController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsCategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Admin\Models\ArticlesModel.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\Encryptor.cs" />

@@ -1,7 +1,78 @@
-﻿
+﻿@model Firefly.Areas.Admin.Models.ArticlesModel
+
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Thêm mới tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section header{
+    Thêm mới tin tức
 }
 
-<h2>Create</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Nhập thông tin
+            </div>
 
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        @using (Html.BeginForm("Create", "NewsArticles", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.newsCategoryID, htmlAttributes: new { @class = "control-label col-md-3" })
+                                @Html.DropDownListFor(model => model.newsCategoryID, ViewBag.ListCategories as SelectList, new {@class = "form-control" }) 
+                                @Html.ValidationMessageFor(model => model.newsCategoryID, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.headline, htmlAttributes: new { @class = "control-label col-md-3" })
+                                @Html.TextBoxFor(model => model.headline, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.headline, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.byLine, htmlAttributes: new { @class = "control-label col-md-3" })
+                                @Html.TextBoxFor(model => model.byLine, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.byLine, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.source, htmlAttributes: new { @class = "control-label col-md-3" })
+                                @Html.TextBoxFor(model => model.source, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.source, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.photoURL, htmlAttributes: new { @class = "control-label col-md-3" })
+                                @Html.TextBoxFor(model => model.photoURL, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.photoURL, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.text, htmlAttributes: new { @class = "control-label col-md-3" })
+                                @Html.TextAreaFor(model => model.text, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.text, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Thêm mới" class="btn btn-default" />
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

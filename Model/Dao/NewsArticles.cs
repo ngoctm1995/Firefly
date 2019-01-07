@@ -17,9 +17,9 @@ namespace Model.Dao
             db = new TechFireFlyDbContext();
         }
 
-        public long Insert(NewsCategory entity)
+        public long Insert(NewsArticle entity)
         {
-            db.NewsCategories.Add(entity);
+            db.NewsArticles.Add(entity);
             db.SaveChanges();
             return entity.id;
         }
@@ -42,8 +42,10 @@ namespace Model.Dao
         {
             try
             {
-                var category = db.NewsCategories.Find(id);
-                db.NewsCategories.Remove(category);
+                var category = db.NewsArticles.Find(id);
+                var articleCategory = db.NewsArticleCategories.Where(a => a.newsArticleID == id).SingleOrDefault();
+                db.NewsArticles.Remove(category);
+                db.NewsArticleCategories.Remove(articleCategory);
                 db.SaveChanges();
                 return true;
             }
@@ -56,23 +58,6 @@ namespace Model.Dao
         public NewsCategory ViewDetail(int id)
         {
             return db.NewsCategories.Find(id);
-        }
-
-        public IEnumerable<NewsArticle> ListAllPaging(string seachString, int page, int pageSize)
-        {
-            IQueryable<NewsArticle> model = db.NewsArticles;
-            if (!string.IsNullOrEmpty(seachString))
-            {
-                model = model.Where(x => x.headline.Contains(seachString) || x.headline.Contains(seachString));
-            }
-            return model.OrderByDescending(x => x.headline).ToPagedList(page, pageSize);
-        }
-
-        public IQueryable<NewsCategory> ListCategories()
-        {
-            var qCategory = from nc in db.NewsCategories
-                            select nc;
-            return qCategory;
         }
     }
 }
