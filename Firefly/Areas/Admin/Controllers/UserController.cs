@@ -7,6 +7,7 @@ using Model.EF;
 using Model.Dao;
 using Firefly.Common;
 using PagedList;
+using System.Web.Security;
 
 namespace Firefly.Areas.Admin.Controllers
 {
@@ -30,6 +31,13 @@ namespace Firefly.Areas.Admin.Controllers
         {
             var user = new UserDao().ViewDetail(id);
             return View(user);
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("Index", "User");
         }
 
         [HttpPost]

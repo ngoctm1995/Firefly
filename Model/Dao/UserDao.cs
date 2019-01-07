@@ -75,6 +75,7 @@ namespace Model.Dao
         {
             return db.Users.Find(id);
         }
+
         public int Login(string userName, string passWord)
         {
             var result = db.Users.FirstOrDefault(x => x.UserName == userName);
