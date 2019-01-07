@@ -113,27 +113,27 @@ namespace Firefly.Areas.Admin.Controllers
             return View("Index");
         }
 
-        public bool Update(ArticlesModel model)
-        {
-            try
-            {
-                var article = db.NewsArticles.Find(model.id);
-                article.headline = article.headline;
-                article.byLine = article.byLine;
-                article.source = article.source;
-                article.text = article.text;
-                article.lastModifiedDate = DateTime.Now;
+        //public bool Update(ArticlesModel model)
+        //{
+        //    try
+        //    {
+        //        var article = db.NewsArticles.Find(model.id);
+        //        article.headline = article.headline;
+        //        article.byLine = article.byLine;
+        //        article.source = article.source;
+        //        article.text = article.text;
+        //        article.lastModifiedDate = DateTime.Now;
 
-                var articleCategory = db.NewsArticleCategories.Where(a => a.newsArticleID == model.id).SingleOrDefault();
-                articleCategory.newsCategoryID = articleCategory
+        //        var articleCategory = db.NewsArticleCategories.Where(a => a.newsArticleID == model.id).SingleOrDefault();
+        //        articleCategory.newsCategoryID = articleCategory
 
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return false;
+        //    }s
+        //}
 
         [HttpDelete]
         public ActionResult Delete(int id)
