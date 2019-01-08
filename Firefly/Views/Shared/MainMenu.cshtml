@@ -1,4 +1,4 @@
-﻿@model List<Model.EF.Menu>
+﻿@model List<Model.EF.NewsCategory>
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="icons">
         <ul>
@@ -17,7 +17,7 @@
             @foreach (var item in Model)
             {
                 <li class="nav-item">
-                    <a class="nav-link" href="@item.Link">@item.Text<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="@item.id">@item.name<span class="sr-only">(current)</span></a>
                 </li>
             }
 

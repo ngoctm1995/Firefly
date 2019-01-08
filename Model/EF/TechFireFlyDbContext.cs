@@ -16,7 +16,6 @@ namespace Model.EF
         public virtual DbSet<NewsArticleCategory> NewsArticleCategories { get; set; }
         public virtual DbSet<NewsCategory> NewsCategories { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<Footer> Footers { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

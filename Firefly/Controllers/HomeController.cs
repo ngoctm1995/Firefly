@@ -18,7 +18,7 @@ namespace Firefly.Controllers
         [ChildActionOnly]
         public ActionResult MainMenu()
         {
-            var model = new MenuDao().ListByGroupId(1);
+            var model = new NewsCategories().GetCategory();
             return PartialView(model);
         }
 
@@ -32,7 +32,7 @@ namespace Firefly.Controllers
         [ChildActionOnly]
         public ActionResult FooterMenu()
         {
-            var model = new MenuDao().ListByGroupId(1);
+            var model = new NewsCategories().GetCategory();
             return PartialView(model);
         }
 
