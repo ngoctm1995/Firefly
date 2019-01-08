@@ -43,12 +43,12 @@
             @{Html.RenderAction("MainMenu", "Home"); }
         </div>
 
-        @RenderSection("headder_index", required:false)
+        @RenderSection("headder_index", required: false)
 
     </div>
     <div class="main">
         @RenderBody()
-       
+
     </div>
     <!--Footer -->
     @{Html.RenderAction("FooterMenu", "Home"); }
