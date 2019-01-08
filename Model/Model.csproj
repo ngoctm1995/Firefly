@@ -58,13 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\FooterDao.cs" />
+    <Compile Include="Dao\MenuDao.cs" />
     <Compile Include="Dao\NewsArticles.cs" />
     <Compile Include="Dao\NewsCategories.cs" />
     <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="EF\Footer.cs" />
     <Compile Include="EF\NewsArticle.cs" />
     <Compile Include="EF\NewsArticleCategory.cs" />
     <Compile Include="EF\NewsCategory.cs" />
     <Compile Include="EF\TechFireFlyDbContext.cs" />
+    <Compile Include="EF\Menu.cs" />
     <Compile Include="EF\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

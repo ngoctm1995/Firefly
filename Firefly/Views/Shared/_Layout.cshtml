@@ -40,7 +40,7 @@
     <div class="header-outs" id="header">
         <div class="headder-nav-icon">
             <!--//navigation section -->
-           
+            @{Html.RenderAction("MainMenu", "Home"); }
         </div>
 
         @RenderSection("headder_index", required:false)
@@ -51,34 +51,9 @@
        
     </div>
     <!--Footer -->
-    <section class="buttom-footer py-lg-5 py-md-4 py-sm-3 py-3">
-        <div class="headder-logo-icon text-center">
-            <span class="fab fa-accusoft"></span>
-            <h2 class="mb-3"><a href="index.html">Inside-Art</a></h2>
-        </div>
-        <div class="buttom-nav py-3">
-            <nav class="border-line">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link ">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="service.html" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </section>
+    @{Html.RenderAction("FooterMenu", "Home"); }
     <footer>
-        <div class="footer-bottom py-lg-4 py-3 text-center">
-            <p>©2018 Inside-Art. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
-        </div>
+        @{Html.RenderAction("Footer", "Home"); }
     </footer>
     <!-- //Footer -->
     <!--js working-->

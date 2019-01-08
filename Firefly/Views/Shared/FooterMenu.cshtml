@@ -1,0 +1,33 @@
+﻿@model  List<Model.EF.Menu>
+
+<section class="buttom-footer py-lg-5 py-md-4 py-sm-3 py-3">
+    <div class="headder-logo-icon text-center">
+        <span class="fab fa-accusoft"></span>
+        <h2 class="mb-3"><a href="index.html">Inside-Art</a></h2>
+    </div>
+    <div class="buttom-nav py-3">
+        <nav class="border-line">
+            <ul class="nav justify-content-center">
+
+                @foreach (var item in Model)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@item.Link">@item.Text<span class="sr-only">(current)</span></a>
+                    </li>
+                }
+                @*<li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link ">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>*@
+            </ul>
+        </nav>
+    </div>
+</section>
