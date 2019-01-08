@@ -65,7 +65,8 @@ namespace Firefly.Areas.Admin.Controllers
                     text = article.text,
                     createdDate = DateTime.Now,
                     lastModifiedDate = DateTime.Now,
-                    publishDate = DateTime.Now
+                    publishDate = DateTime.Now,
+                    photoURL = article.photoURL
                 };
 
                 var articlesCategory = new NewsArticleCategory();

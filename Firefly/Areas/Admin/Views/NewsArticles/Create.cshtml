@@ -8,6 +8,22 @@
     Thêm mới tin tức
 }
 
+@section jsFooter{
+        <script>
+                $(document).ready(function () {
+                    $('#btnChoose').on('click', function (e) {
+                        e.preventDefault();
+                        var finder = new CKFinder();
+                        finder.selectActionFunction = function (url) {
+                            $('#txtPhotoUrl').val(url);
+                        };
+                        finder.popup();
+                    })
+                })
+        </script>
+    }
+<script src="/assets/admin/js/Plugin/ckeditor/ckeditor.js"></script>
+<script src="/assets/admin/js/Plugin/ckfinder/ckfinder.js"></script>
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
@@ -17,7 +33,7 @@
 
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         @using (Html.BeginForm("Create", "NewsArticles", FormMethod.Post))
                         {
                             @Html.AntiForgeryToken()
@@ -26,7 +42,7 @@
 
                             <div class="form-group">
                                 @Html.LabelFor(model => model.newsCategoryID, htmlAttributes: new { @class = "control-label col-md-3" })
-                                @Html.DropDownListFor(model => model.newsCategoryID, ViewBag.ListCategories as SelectList, new {@class = "form-control" }) 
+                                @Html.DropDownListFor(model => model.newsCategoryID, ViewBag.ListCategories as SelectList, new {@class = "form-control col-lg-4" }) 
                                 @Html.ValidationMessageFor(model => model.newsCategoryID, "", new { @class = "text-danger" })
                             </div>
 
@@ -49,15 +65,19 @@
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.photoURL, htmlAttributes: new { @class = "control-label col-md-3" })
-                                @Html.TextBoxFor(model => model.photoURL, new { @class = "form-control" })
+                                @Html.LabelFor(model => model.photoURL, htmlAttributes: new { @class = "control-label col-md-4" })
+                                @Html.TextBoxFor(model => model.photoURL, new { @class = "form-control", @id = "txtPhotoUrl" })
+                                <a id="btnChoose" href="#">Chọn ảnh</a>
                                 @Html.ValidationMessageFor(model => model.photoURL, "", new { @class = "text-danger" })
+                              
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.text, htmlAttributes: new { @class = "control-label col-md-3" })
-                                @Html.TextAreaFor(model => model.text, new { @class = "form-control" })
+                                @Html.LabelFor(model => model.text, htmlAttributes: new { @class = "control-label" })
+                                @Html.TextAreaFor(model => model.text, new { @class = "form-control", @id = "txtContent" })
                                 @Html.ValidationMessageFor(model => model.text, "", new { @class = "text-danger" })
+                                <script>CKEDITOR.replace("txtContent");</script>
+
                             </div>
 
                             <div class="form-group">

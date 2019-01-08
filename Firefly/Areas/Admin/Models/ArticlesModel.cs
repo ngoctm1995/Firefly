@@ -5,16 +5,16 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Firefly.Areas.Admin.Models
 {
     public class ArticlesModel
     {
-        public List<NewsCategory> listCategories { get; set; }
 
         public int id { get; set; }
 
-        [Display(Name = "Số danh mục")]
+        [Display(Name = "Danh mục")]
         public int newsCategoryID { get; set; }
         
         [Display(Name = "Danh mục")]
@@ -23,6 +23,7 @@ namespace Firefly.Areas.Admin.Models
         [Display(Name ="Tiêu đề")]
         public string headline { get; set; }
 
+        [AllowHtml]
         [Display(Name = "Nội dung")]
         public string text { get; set; }
 
