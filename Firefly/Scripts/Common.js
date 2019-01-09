@@ -8,3 +8,7 @@
     var btnConfirmHtml = $(".btnConfirm").html();
     $(".btnConfirm").html('<i class="fas fa-check" title="Cập nhật"></i>&nbsp' + btnConfirmHtml);
 });
+
+function removeRow(rowId) {
+    $("#row_" + rowId).remove();
+}

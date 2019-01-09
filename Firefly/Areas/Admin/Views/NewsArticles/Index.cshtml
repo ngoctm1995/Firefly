@@ -18,15 +18,6 @@
                 @using (Html.BeginForm("Index", "NewsArticles", FormMethod.Get))
                 {
                     <div class="row">
-                        @*<div class="col-lg-12">
-                            <div class="col-md-4">
-                                <input type="text" value="@ViewBag.SearchString" class="form-control" placeholder="Nhập tiêu đề..." name="seachString" />
-                            </div>
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-                                @Html.ActionLink("Tạo mới", "Create")
-                            </div>
-                        </div>*@
                         <div class="col-lg-4 input-group custom-search-form" style="float:right; padding-right:15px;">
                             <input type="text" class="form-control" placeholder="Nhập tiêu đề ..." value="@ViewBag.SearchString" name="seachString" />
                             <span class="input-group-btn">
@@ -67,7 +58,7 @@
                                         @Ajax.ActionLink("Xóa", "Delete", new { @id = item.id }, new AjaxOptions
                                    {
                                        Confirm = "Bạn có muốn xóa tin này?",
-                                       OnComplete = "@('#row_ " + @item.id + "').remove()",
+                                       OnComplete = "removeRow(" + @item.id + ")",
                                        HttpMethod = "Delete"
                                    }, new { @class = "btnDelete" })
                                     </td>
