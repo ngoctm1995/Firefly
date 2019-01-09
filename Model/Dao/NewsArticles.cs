@@ -59,5 +59,27 @@ namespace Model.Dao
         {
             return db.NewsCategories.Find(id);
         }
+
+        public List<NewsArticle> ListNewsArticle1(int top)
+        {
+            return db.NewsArticles.Where(x => x.priority == 1).OrderByDescending(x => x.createdDate).Take(top).ToList();
+        }
+
+        public List<NewsArticle> ListNewsArticle2(int top)
+        {
+            return db.NewsArticles.Where(x => x.priority == 2).OrderByDescending(x => x.createdDate).Take(top).ToList();
+        }
+        public List<NewsArticle> ListNewsArticle3(int top)
+        {
+            return db.NewsArticles.Where(x => x.priority == 3).OrderByDescending(x => x.createdDate).Take(top).ToList();
+        }
+        public List<NewsArticle> ListNewsArticle4(int top)
+        {
+            return db.NewsArticles.Where(x => x.priority == 4).OrderByDescending(x => x.createdDate).Take(top).ToList();
+        }
+        public List<NewsArticle> ListNewsArticle5(int top)
+        {
+            return db.NewsArticles.Where(x => x.priority == 2).OrderByDescending(x => x.createdDate).Take(top).ToList();
+        }
     }
 }

@@ -497,15 +497,17 @@ min-height: 416px;
 margin-top: 6em;
 }
 .blog-two-img {
-background: url(../images/ab2.jpg) no-repeat 0px 0px;
+/*background: url(../images/ab2.jpg) no-repeat 0px 0px;*/
 background-size: cover;
 min-height:400px;
 }
 .about-wthree-info h4 ,.blog-agile-text-middle h4,.blog-agile-text h4,.abut-inner-wls-head h4,
 .ser-list-w3layouts h4,.contact_footer_grid_left h4,.comments-grid-right h4 a,.leave-comment h4{
-color: #7a86ce;
-font-size: 21px;
+/*color: #7a86ce;*/
+color:#222;
+font-size: 18px;
 text-transform: uppercase;
+display:block;
 letter-spacing:2px;
 font-weight: 600;
 }
@@ -847,8 +849,9 @@ color:#7a86ce;
 /*-- //Inner-service --*/
 /*--comments single-page--*/
 .comment-imgs img {
-border-radius: 50%;
+/*border-radius: 50%;*/
 text-align: center;
+height:100px;
 }
 .comment-imgs {
 padding-top: 8px;
@@ -987,7 +990,7 @@ font-size: 19px;
 line-height: 32px;
 }
 .blog-two-img {
-min-height: 364px;
+min-height: 300px;
 }
 .blog-three-img {
 min-height: 400px;
