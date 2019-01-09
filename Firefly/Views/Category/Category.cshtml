@@ -1,14 +1,15 @@
-﻿
-@{
-    ViewBag.Title = "Trang chủ";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model Model.EF.NewsCategory
 
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
     var ListNewsArticle1 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles1;
     var ListNewsArticle2 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles2;
     var ListNewsArticle3 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles3;
     var ListNewsArticle4 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles4;
     var ListNewsArticle5 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles5;
 }
+
 
 @section headder_index{
 
@@ -93,8 +94,8 @@
                     <!--comments-->
                     <div class="comments-w3layouts-grid pt-lg-5 pt-md-4 pt-3">
                         @*<div class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-                            <h3>Our Recent Comments</h3>
-                        </div>*@
+                                <h3>Our Recent Comments</h3>
+                            </div>*@
                         @foreach (var item in ListNewsArticle4)
                         {
                             var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;

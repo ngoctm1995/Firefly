@@ -23,12 +23,12 @@ namespace Firefly.Controllers
             return View();
         }
 
-        [ChildActionOnly]
-        public ActionResult MainMenu()
-        {
-            var model = new NewsCategories().GetCategory();
-            return PartialView(model);
-        }
+        //[ChildActionOnly]
+        //public ActionResult MainMenu()
+        //{
+        //    var model = new NewsCategories().GetCategory();
+        //    return PartialView(model);
+        //}
 
         [ChildActionOnly]
         public ActionResult Footer()
