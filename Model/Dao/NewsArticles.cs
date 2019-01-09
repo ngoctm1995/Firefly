@@ -55,9 +55,9 @@ namespace Model.Dao
             }
         }
 
-        public NewsCategory ViewDetail(int id)
+        public NewsArticle ViewDetail(int id)
         {
-            return db.NewsCategories.Find(id);
+            return db.NewsArticles.Find(id);
         }
 
         public List<NewsArticle> ListNewsArticle1(int top)

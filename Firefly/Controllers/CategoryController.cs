@@ -36,5 +36,11 @@ namespace Firefly.Controllers
             var category = new NewsCategories().ViewDetail(cateId);
             return View(category);
         }
+        public ActionResult Detail(int id)
+        {
+            var article = new NewsArticles().ViewDetail(id);
+            //ViewBag.NewsCategory = new NewsCategories().ViewDetail(article.CategoryID);
+            return View(article);
+        }
     }
 }

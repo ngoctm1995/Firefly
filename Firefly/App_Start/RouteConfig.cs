@@ -16,11 +16,16 @@ namespace Firefly
 
             routes.MapRoute(
                 name: "Product Category",
-                url: "{MetaTitle}-{cateId}",
+                url: "danh-muc/{MetaTitle}-{cateId}",
                 defaults: new { controller = "Category", action = "Category", id = UrlParameter.Optional },
                 namespaces: new[] { "Firefly.Controllers" }
             );
-
+            routes.MapRoute(
+              name: "Product Detail",
+              url: "chi-tiet/{MetaTitle}-{id}",
+              defaults: new { controller = "Category", action = "Detail", id = UrlParameter.Optional },
+              namespaces: new[] { "Firefly.Controllers" }
+            );
             routes.MapRoute(
                name: "Default",
                url: "{controller}/{action}/{id}",
