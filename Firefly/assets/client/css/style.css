@@ -525,7 +525,7 @@ ul.short_ls li {
 .using-border {
     width: 100%;
     border: none;
-    background: #7a86ce;
+    background: #000;
 }
 /*-- //inner-banner --*/
 /*-- //banner --*/
@@ -583,8 +583,11 @@ ul.short_ls li {
     font-size: 18px;
     text-transform: uppercase;
     display: block;
+    line-height: 30px;
     letter-spacing: 2px;
     font: normal 16px/21px SFD-Bold;
+    font-weight: 600;
+    font-family: SFD-Bold;
 }
 
 .about-wthree-info h5, .blog-agile-text-middle h5, .blog-agile-text h5 {
@@ -652,7 +655,7 @@ ul.short_ls li {
 
 .agile-categories-list ul li a, .bottom-para h6 a, .comments-grid-right ul li {
     font-size: 16px;
-    color: #929292;
+    color: #000000;
     font-weight: 600;
     letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
@@ -1147,7 +1150,7 @@ footer p {
     }
 
     .about-wthree-info h5, .blog-agile-text-middle h5, .blog-agile-text h5 {
-        font-size: 19px;
+        font-size: 16px;
         line-height: 32px;
     }
 

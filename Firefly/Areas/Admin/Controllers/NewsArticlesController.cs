@@ -60,6 +60,10 @@ namespace Firefly.Areas.Admin.Controllers
                 var articleDetails = new NewsArticle
                 {
                     headline = article.headline,
+                    extract = article.extract,
+                    encoding = article.encoding,
+                    tags = article.tags,
+                    priority = article.priority,
                     byLine = article.byLine,
                     source = article.source,
                     text = article.text,

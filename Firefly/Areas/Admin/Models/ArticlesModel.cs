@@ -23,6 +23,16 @@ namespace Firefly.Areas.Admin.Models
         [Display(Name ="Tiêu đề")]
         public string headline { get; set; }
 
+        [Display(Name = "Tóm tắt")]
+        public string extract { get; set; }
+
+        [Display(Name = "Mã hóa")]
+        public string encoding { get; set; }
+        [Display(Name = "Gắn thẻ")]
+        public string tags { get; set; }
+        [Display(Name = "Vị trí")]
+        public int? priority { get; set; }
+
         [AllowHtml]
         [Display(Name = "Nội dung")]
         public string text { get; set; }
