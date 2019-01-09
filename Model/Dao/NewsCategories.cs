@@ -67,5 +67,10 @@ namespace Model.Dao
             }
             return model.OrderByDescending(x => x.name).ToPagedList(page, pageSize);
         }
+
+        public List<NewsCategory> GetCategory()
+        {
+            return db.NewsCategories.ToList();
+        }
     }
 }

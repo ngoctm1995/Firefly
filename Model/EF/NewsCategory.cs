@@ -23,6 +23,9 @@
         [StringLength(255)]
         public string name { get; set; }
 
+        [StringLength(50)]
+        public string MetaTitle { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NewsArticleCategory> NewsArticleCategory { get; set; }
     }

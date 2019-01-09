@@ -13,11 +13,21 @@ namespace Firefly
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "Product Category",
+                url: "{MetaTitle}-{cateId}",
+                defaults: new { controller = "Category", action = "Category", id = UrlParameter.Optional },
+                namespaces: new[] { "Firefly.Controllers" }
             );
+
+            routes.MapRoute(
+               name: "Default",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+               namespaces: new[] { "Firefly.Controllers" }
+           );
+
         }
     }
 }

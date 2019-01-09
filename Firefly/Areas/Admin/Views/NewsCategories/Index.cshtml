@@ -7,7 +7,6 @@
 @section header{
     Danh sách Danh mục
 }
-
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
@@ -25,39 +24,41 @@
                             </div>
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-                                @Html.ActionLink("Tạo mới","Create")
+                                @Html.ActionLink("Tạo mới", "Create")
                             </div>
                         </div>
                     </div>
 
                 }
-               
+
                 <div class="table-responsive">
                     <br />
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Thao tác</th>
                                 <th>Tên danh mục</th>
+                                <th style="width:10px"></th>
+                                <th style="width:10px"></th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
                                 <tr id="row_@item.id">
+                                    <td>@item.name</td>
                                     <td>
-                                        <a href="/Admin/NewsCategories/Edit/@item.id">Sửa</a>
-                                        |
+                                        <a href="/Admin/NewsCategories/Edit/@item.id" class="btnEdit"></a>
+                                    </td>
+                                    <td>
                                         @Ajax.ActionLink("Xóa", "Delete", new { @id = item.id }, new AjaxOptions
                                    {
                                        Confirm = "Bạn có muốn xóa danh mục này?",
                                        OnComplete = "@('#row_ " + @item.id + "').remove()",
                                        HttpMethod = "Delete",
-                                   })
+                                   }, new { @class = "btnDelete" })
                                     </td>
-                                    <td>@item.name</td>
                                 </tr>
-                                }
+                            }
 
                         </tbody>
                     </table>

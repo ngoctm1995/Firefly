@@ -1,31 +1,254 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var ListNewsArticle1 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles1;
+    var ListNewsArticle6 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles6;
+    var ListNewsArticle2 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles2;
+    var ListNewsArticle3 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles3;
+    var ListNewsArticle4 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles4;
+    var ListNewsArticle5 = (List<Model.EF.NewsArticle>)ViewBag.NewsArticles5;
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+@section headder_index{
+
+}
+<div class="contain">
+    <br>
+
+    <div class="row" style="margin-top:60px !important;">
+        <div class="col-lg-1">
+        </div>
+        @foreach (var item in ListNewsArticle1)
+        {
+            var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+            <div class="col-lg-6">
+                <div class="blog-text mt-0">
+                    <a href="@url"> <img class="blog-two-img" style="width:100% ;height: 240px !important;" src="@item.photoURL" alt="@item.headline" /> </a>
+                    @*<a href="@url"><img class="blog-two-img" src="@item.photoURL" /> </a>*@
+                    @*<img src="@item.photoURL" />*@
+                    <div class="blog-agile-text-middle">
+                        <a href="@url"><h4 style="height:40px">@item.headline</h4> </a>
+                        <a href="@url"> <h5 class="pt-3" style="min-height:200px">@item.extract</h5> </a>
+                        <div class="news-date-list text-sm-right">
+                            <ul>
+                                <li><a href="#" class="text-muted">@item.createdDate</a></li>
+                                <li><a href="#" class="text-muted">@item.tags</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @foreach (var item in ListNewsArticle6)
+        {
+            var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+            <div class="col-lg-4">
+                <div class="blog-text mt-0">
+                    <a href="@url"> <img class="blog-two-img" style="width:100% ;height: 240px !important;" src="@item.photoURL" alt="@item.headline" /> </a>
+                    @*<a href="@url"><img class="blog-two-img" src="@item.photoURL" /> </a>*@
+                    @*<img src="@item.photoURL" />*@
+                    <div class="blog-agile-text-middle">
+                        <a href="@url"><h4 style="height:40px">@item.headline</h4> </a>
+                        <a href="@url"> <h5 class="pt-3" style="min-height:200px">@item.extract</h5> </a>
+                        <div class="news-date-list text-sm-right">
+                            <ul>
+                                <li><a href="#" class="text-muted">@item.createdDate</a></li>
+                                <li><a href="#" class="text-muted">@item.tags</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-lg-1">
+        </div>
+    </div>
+    </br>
+    <div class="row">
+        <div class="col-lg-1"> </div>
+        @foreach (var item in ListNewsArticle2)
+        {
+            var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+            <div class="col-lg-2 col-md-2 w3layouts-right-side-img">
+                <div class="w3layouts-left-side-img">
+                    <img src="@item.photoURL" alt="@item.headline" class="img-fluid">
+                </div>
+                <div class="abut-inner-wls-head" style="height:100px !important;">
+                    <h4 class="py-3" style="height:50px;  text-transform:none !important;">@item.headline</h4>
+                    @*<p style="height:80px; display:inline-block;">@item.extract</p>*@
+                </div>
+            </div>
+        }
+        <div class="col-lg-1"> </div>
+    </div>
+
+    <!--blog -->
+    <section class="contact py-lg-4 py-md-3 py-sm-3 py-3">
+        <div class="container-fluid py-lg-5 py-md-4 py-sm-4 py-3">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6">
+                    <!--blog-->
+                    <!-- Blog-four -->
+                    @foreach (var item in ListNewsArticle3)
+                    {
+                        var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+                        <div class="blog-text mt-0">
+                            <a href="@url"> <img class="blog-two-img" style="width:100% ;height: 240px !important;" src="@item.photoURL" alt="@item.headline" /> </a>
+                            <div class="blog-agile-text-middle">
+                                <h4>@item.headline</h4>
+                                <h5 class="pt-3">@item.extract</h5>
+                                <div class="news-date-list text-sm-right">
+                                    <ul>
+                                        <li><a href="singlepage.html" class="text-muted">@item.createdDate</a></li>
+                                        <li><a href="singlepage.html" class="text-muted">@item.tags</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <!-- //Blog-four-->
+                    <!--comments-->
+                    <div class="comments-w3layouts-grid pt-lg-5 pt-md-4 pt-3">
+                        @*<div class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+                            <h3>Our Recent Comments</h3>
+                        </div>*@
+                        @foreach (var item in ListNewsArticle4)
+                        {
+                            var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+                            <div class="comment-list my-lg-4 my-3">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4 col-sm-4 comment-imgs text-center">
+                                        <img src="@item.photoURL" alt="@item.headline" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-9 col-md-8 col-sm-8 comments-grid-right text-left">
+                                        <h4><a href="url">@item.headline</a></h4>
+                                        <p class="my-2">
+                                            @item.extract
+                                        </p>
+                                        <ul>
+                                            <li>@item.createdDate<i></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <!--//comments-->
+                        <!--comments-form-->
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <!--News Letter-->
+                    <!-- <div class="address_mail_footer_grids"> -->
+                    <!-- <div class="title text-center mb-lg-4 mb-md-3 mb-3"> -->
+                    <!-- <h3>News Letter</h3> -->
+                    <!-- </div> -->
+                    <!-- <div class="news-about-us"> -->
+                    <!-- <form action="#" method="post"> -->
+                    <!-- <div class=" subscribe-form "> -->
+                    <!-- <div class="form-group contact-forms"> -->
+                    <!-- <input type="email" class="form-control" placeholder="Enter" required=""> -->
+                    <!-- </div> -->
+                    <!-- <div class="click-subscribe"> -->
+                    <!-- <button type="submit" class="btn btn-block click-me">Subscribe</button> -->
+                    <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- </form> -->
+                    <!-- </div> -->
+                    <!-- </div> -->
+                    <!--//News Letter-->
+                    <!--Categories-->
+                    @*<div class="mt-lg-4 mt-3 address_mail_footer_grids" style="margin-top:0px !important">
+                            <div class="title text-center mb-lg-4 mb-md-3 mb-3">
+                                <h3>Categories</h3>
+                            </div>
+                            <div class="agile-categories-list text-center">
+                                <ul>
+                                    <li class="pb-2">
+                                        <a href="about.html">Modern Style</a>
+                                    </li>
+                                    <li class="py-2">
+                                        <a href="about.html">Simply Style</a>
+                                    </li>
+                                    <li class="py-2">
+                                        <a href="about.html">Urban Style</a>
+                                    </li>
+                                    <li class="py-2">
+                                        <a href="about.html">Unique Style</a>
+                                    </li>
+                                    <li class="py-2">
+                                        <a href="about.html">Elegant Style</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>*@
+                    <!--//Categories-->
+                    <!--Tags-->
+                    @*<div class="mt-lg-4 mt-3 address_mail_footer_grids">
+                            <div class="title text-center mb-lg-4 mb-md-3 mb-3">
+                                <h3>Tags</h3>
+                            </div>
+                            <div class="tages-w3layouts-list text-center">
+                                <ul>
+                                    <li>
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html">Service</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog2.html">Blog2</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>*@
+                    <!--//Tags-->
+                    <!--Side-blog-->
+                    <div class="mt-lg-4 mt-3 address_mail_footer_grids" style="margin-top:0px !important;">
+                        @*<div class="title text-center mb-lg-4 mb-md-3 mb-3">
+                            <h3>Blog</h3>
+                        </div>*@
+                        <div class="dance-agile-info">
+                            @foreach (var item in ListNewsArticle5)
+                            {
+                                var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+                                <div class="footer-grid row mb-2">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-5">
+                                        <img src="/assets/client/images/bb1.jpg" alt=" " class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-8 col-md-6 col-sm-6 col-7 bottom-para px-0">
+                                        <h6><a href="@url">@item.headline</a></h6>
+                                        <div class="news-date-list pt-2">
+                                            <ul>
+                                                <li><a href="singlepage.html" class="clr-two">@item.createdDate</a></li>
+                                                <li><a href="singlepage.html" class="clr-two">@item.tags</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+
+                        </div>
+                    </div>
+                    <!--//Side-blog-->
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+    </section>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started (MVC)</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
