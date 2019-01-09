@@ -16,7 +16,7 @@ namespace Model.EF
         }
 
         public int id { get; set; }
-
+        public int CategoryID { get; set; }
         [Required]
         [StringLength(255)]
         public string headline { get; set; }

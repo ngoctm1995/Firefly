@@ -41,9 +41,9 @@
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.newsCategoryID, htmlAttributes: new { @class = "control-label col-md-3" })
-                                @Html.DropDownListFor(model => model.newsCategoryID, ViewBag.ListCategories as SelectList, new {@class = "form-control col-lg-4" }) 
-                                @Html.ValidationMessageFor(model => model.newsCategoryID, "", new { @class = "text-danger" })
+                                @Html.LabelFor(model => model.CategoryID, htmlAttributes: new { @class = "control-label col-md-3" })
+                                @Html.DropDownListFor(model => model.CategoryID, ViewBag.ListCategories as SelectList, new {@class = "form-control col-lg-4" }) 
+                                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
                             </div>
                             <div class="form-group">
                                 @Html.LabelFor(model => model.headline, htmlAttributes: new { @class = "control-label col-md-3" })

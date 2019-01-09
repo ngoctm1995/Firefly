@@ -15,8 +15,8 @@ namespace Firefly.Areas.Admin.Models
         public int id { get; set; }
 
         [Display(Name = "Danh mục")]
-        public int newsCategoryID { get; set; }
-        
+        public int CategoryID { get; set; }
+
         [Display(Name = "Danh mục")]
         public string newsCategory { get; set; }
         

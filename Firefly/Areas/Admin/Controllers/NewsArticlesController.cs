@@ -24,18 +24,18 @@ namespace Firefly.Areas.Admin.Controllers
 
         public IEnumerable<ArticlesModel> ListAllPaging(string seachString, int page, int pageSize)
         {
-            var model = from nc in db.NewsCategories
-                        join nac in db.NewsArticleCategories on nc.id equals nac.newsCategoryID
-                        join na in db.NewsArticles on nac.newsArticleID equals na.id
+            var model = from nc in db.NewsArticles
+                            //join nac in db.NewsArticleCategories on nc.id equals nac.newsCategoryID
+                        join na in db.NewsCategories on nc.CategoryID equals na.id
 
                         select new ArticlesModel
                         {
-                            id = na.id,
-                            newsCategoryID = nc.id,
-                            newsCategory = nc.name,
-                            headline = na.headline,
-                            publishDate = na.publishDate,
-                            byLine = na.byLine
+                            id = nc.id,
+                            CategoryID = nc.id,
+                            newsCategory = na.name,
+                            headline = nc.headline,
+                            publishDate = nc.publishDate,
+                            byLine = nc.byLine
                         }; 
 
             if (!string.IsNullOrEmpty(seachString))
@@ -60,6 +60,7 @@ namespace Firefly.Areas.Admin.Controllers
                 var articleDetails = new NewsArticle
                 {
                     headline = article.headline,
+                    CategoryID = article.CategoryID,
                     extract = article.extract,
                     encoding = article.encoding,
                     tags = article.tags,
@@ -78,9 +79,9 @@ namespace Firefly.Areas.Admin.Controllers
                 using (var context = new TechFireFlyDbContext())
                 {
                     context.NewsArticles.Add(articleDetails);
-                    articlesCategory.newsArticleID = articleDetails.id;
-                    articlesCategory.newsCategoryID = article.newsCategoryID;
-                    context.NewsArticleCategories.Add(articlesCategory);
+                    //articlesCategory.newsArticleID = articleDetails.id;
+                    //articlesCategory.newsCategoryID = article.newsCategoryID;
+                    //context.NewsArticleCategories.Add(articlesCategory);
                     context.SaveChanges();
                 };
 

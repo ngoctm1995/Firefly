@@ -43,9 +43,9 @@ namespace Model.Dao
             try
             {
                 var category = db.NewsArticles.Find(id);
-                var articleCategory = db.NewsArticleCategories.Where(a => a.newsArticleID == id).SingleOrDefault();
+                //var articleCategory = db.NewsArticleCategories.Where(a => a.newsArticleID == id).SingleOrDefault();
                 db.NewsArticles.Remove(category);
-                db.NewsArticleCategories.Remove(articleCategory);
+                //db.NewsArticleCategories.Remove(articleCategory);
                 db.SaveChanges();
                 return true;
             }
