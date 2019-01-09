@@ -146,8 +146,8 @@ a.navbar-brand span {
     letter-spacing: 0px;
     text-align: center;
     margin: 0px 4px;
-    color: #ffffff;
-    background: #ce1414;
+    color: #000000;
+    background: #fff;
     line-height: 38px;
     width: 36px;
     line-height: 38px;
@@ -158,6 +158,7 @@ a.navbar-brand span {
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
     -moz-transition: 0.5s all;
+    border-radius: 9px;
 }
 
     .icons ul li a span:hover, .profile ul li span:hover {
@@ -165,7 +166,7 @@ a.navbar-brand span {
     }
 
 nav.navbar.navbar-expand-lg.navbar-light {
-    background: rgba(0, 0, 0, 0);
+    background: #000;
     z-index: 999;
 }
 
@@ -179,7 +180,7 @@ ul.navbar-nav.nav-fill {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #000;
+    color: #fff;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1151,7 +1152,7 @@ footer p {
     }
 
     .blog-two-img {
-        min-height: 300px;
+        min-height: 250px;
     }
 
     .blog-three-img {

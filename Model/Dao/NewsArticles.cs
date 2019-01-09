@@ -81,5 +81,9 @@ namespace Model.Dao
         {
             return db.NewsArticles.Where(x => x.priority == 2).OrderByDescending(x => x.createdDate).Take(top).ToList();
         }
+        public List<NewsArticle> ListNewsArticle6(int top)
+        {
+            return db.NewsArticles.Where(x => x.priority == 2).OrderByDescending(x => x.createdDate).Take(top).ToList();
+        }
     }
 }
