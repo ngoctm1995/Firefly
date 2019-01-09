@@ -1311,6 +1311,7 @@
     <Content Include="assets\client\webfonts\fa-brands-400.svg" />
     <Content Include="assets\client\webfonts\fa-regular-400.svg" />
     <Content Include="assets\client\webfonts\fa-solid-900.svg" />
+    <Content Include="bin\CKFinder.dll" />
     <Content Include="ckfinder\userfiles\files\shiro.jpg" />
     <Content Include="ckfinder\userfiles\_thumbs\Files\shiro.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -3031,9 +3032,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="assets\client\" />
     <Folder Include="ckfinder\userfiles\images\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
