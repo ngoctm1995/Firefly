@@ -99,7 +99,6 @@ namespace Firefly.Areas.Admin.Controllers
             var user = new NewsCategories().ViewDetail(id);
             return View(user);
         }
-
         [HttpPost]
         public ActionResult Edit(ArticlesModel category)
         {

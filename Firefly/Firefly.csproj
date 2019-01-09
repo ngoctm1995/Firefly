@@ -1417,7 +1417,6 @@
     <Content Include="Areas\Admin\Views\NewsCategories\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\NewsArticles\Create.cshtml" />
     <Content Include="Areas\Admin\Views\NewsArticles\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\NewsArticles\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Navigation.cshtml" />
     <Content Include="assets\client\webfonts\fa-brands-400.eot" />
     <Content Include="assets\client\webfonts\fa-brands-400.ttf" />
@@ -2993,6 +2992,7 @@
     <Content Include="assets\admin\js\Plugin\ckeditor\skins\moono-lisa\readme.md" />
     <Content Include="assets\admin\js\Plugin\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="assets\admin\js\Plugin\ckfinder\userfiles\.htaccess" />
+    <Content Include="Areas\Admin\Views\NewsArticles\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Common.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -24,12 +24,33 @@ namespace Model.Dao
             return entity.id;
         }
 
-        public bool Update(NewsCategory entity)
+        public bool Update(NewsArticle entity)
         {
             try
             {
-                var category = db.NewsCategories.Find(entity.id);
-                category.name = entity.name;
+                var article = db.NewsArticles.Find(entity.id);
+                article.CategoryID = entity.CategoryID;
+                article.headline = entity.headline;
+                article.extract = entity.extract;
+                article.encoding = entity.encoding;
+                article.text = entity.text;
+                article.publishDate = entity.publishDate;
+                article.byLine = entity.byLine;
+                article.source = entity.source;
+                article.state = entity.state;
+                article.clientQuote = entity.clientQuote;
+                article.createdDate = entity.createdDate;
+                article.lastModifiedDate = entity.lastModifiedDate;
+                article.htmlMetaDescription = entity.htmlMetaDescription;
+                article.htmlMetaKeywords = entity.htmlMetaKeywords;
+                article.htmlMetaLangauge = entity.htmlMetaLangauge;
+                article.tags = entity.tags;
+                article.priority = entity.priority;
+                article.format = entity.format;
+                article.photoWidth = entity.photoWidth;
+                article.photoHeight = entity.photoHeight;
+                article.photoHtmlAlt = entity.photoHtmlAlt;
+                article.photoURL = entity.photoURL;
                 db.SaveChanges();
                 return true;
             }
