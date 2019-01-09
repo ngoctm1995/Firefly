@@ -16,21 +16,21 @@
 
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-8">
                             @using (Html.BeginForm("Create", "NewsCategories", FormMethod.Post))
                             {
                                 @Html.AntiForgeryToken()
 
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                                <div class="form-group col-lg-12">
+                                <div class="form-group">
                                     @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label" })
                                     @Html.TextBoxFor(model => model.name, new { @class = "form-control col-lg-4" })
                                     @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-md-offset-2 col-md-10">
-                                        <input type="submit" value="Tạo mới" class="btn btn-success" />
+                                    <div>
+                                        <input type="submit" value="Tạo mới" class="btn btn-success btnConfirm" />
                                     </div>
                                 </div>
                             }
