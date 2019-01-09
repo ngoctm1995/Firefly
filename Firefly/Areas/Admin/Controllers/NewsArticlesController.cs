@@ -36,7 +36,7 @@ namespace Firefly.Areas.Admin.Controllers
                             headline = nc.headline,
                             publishDate = nc.publishDate,
                             byLine = nc.byLine
-                        }; 
+                        };
 
             if (!string.IsNullOrEmpty(seachString))
             {
@@ -96,24 +96,72 @@ namespace Firefly.Areas.Admin.Controllers
 
         public ActionResult Edit(int id)
         {
-            var user = new NewsCategories().ViewDetail(id);
-            return View(user);
+            var user = new NewsArticles().ViewDetail(id);
+            Models.ArticlesModel objArticle = new ArticlesModel();
+            // Parse data
+            objArticle.id = user.id;
+            objArticle.CategoryID = user.CategoryID;
+            objArticle.headline = user.headline;
+            objArticle.extract = user.extract;
+            objArticle.encoding = user.encoding;
+            objArticle.text = user.text;
+            objArticle.publishDate = user.publishDate;
+            objArticle.byLine = user.byLine;
+            objArticle.source = user.source;
+            objArticle.state = user.state;
+            //objArticle.clientQuote = user.clientQuote;
+            objArticle.createdDate = user.createdDate;
+            objArticle.lastModifiedDate = user.lastModifiedDate;
+            objArticle.htmlMetaDescription = user.htmlMetaDescription;
+            objArticle.htmlMetaKeywords = user.htmlMetaKeywords;
+            objArticle.htmlMetaLangauge = user.htmlMetaLangauge;
+            objArticle.tags = user.tags;
+            objArticle.priority = user.priority;
+            //objArticle.format = user.format;
+            objArticle.photoHtmlAlt = user.photoHtmlAlt;
+            //objArticle.photoWidth = user.photoWidth;
+            //objArticle.photoHeight = user.photoHeight;
+            objArticle.photoURL = user.photoURL;
+            ViewBag.ListCategories = new SelectList(db.NewsCategories.AsEnumerable(), "id", "name");
+            return View(objArticle);
         }
         [HttpPost]
         public ActionResult Edit(ArticlesModel category)
         {
             if (ModelState.IsValid)
             {
-                //var ncategory = new NewsCategories();
-                //bool result = ncategory.Update(category);
-                //if (result)
-                //{
-                //    return RedirectToAction("Index", "NewsCategories");
-                //}
-                //else
-                //{
-                //    ModelState.AddModelError("", "Cập nhật danh mục không thành công!");
-                //}
+                var narticle = new NewsArticles();
+                NewsArticle newArticle = db.NewsArticles.Find(category.id);
+                newArticle.CategoryID = category.CategoryID;
+                newArticle.headline = category.headline;
+                newArticle.extract = category.extract;
+                newArticle.encoding = category.encoding;
+                newArticle.text = category.text;
+                //newArticle.publishDate = category.publishDate;
+                newArticle.byLine = category.byLine;
+                newArticle.source = category.source;
+                newArticle.state = category.state;
+                //newArticle.clientQuote = category.clientQuote;
+                newArticle.lastModifiedDate = DateTime.Now;
+                newArticle.htmlMetaDescription = category.htmlMetaDescription;
+                newArticle.htmlMetaKeywords = category.htmlMetaKeywords;
+                newArticle.htmlMetaLangauge = category.htmlMetaLangauge;
+                newArticle.tags = category.tags;
+                newArticle.priority = category.priority;
+                //newArticle.format = category.format;
+                newArticle.photoHtmlAlt = category.photoHtmlAlt;
+                //newArticle.photoWidth = category.photoWidth;
+                //newArticle.photoHeight = category.photoHeight;
+                newArticle.photoURL = category.photoURL;
+                bool result = narticle.Update(newArticle);
+                if (result)
+                {
+                    return RedirectToAction("Index", "NewsArticles");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Cập nhật tin tức không thành công!");
+                }
             }
             return View("Index");
         }
