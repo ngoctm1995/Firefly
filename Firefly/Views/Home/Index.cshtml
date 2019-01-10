@@ -22,7 +22,8 @@
         </div>
         @foreach (var item in ListNewsArticle1)
         {
-            var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+            //var url = "/chi-tiet/" + @item.encoding + "-" + @item.id;
+            var url = "/Admin/NewsArticles/Details/" + @item.encoding + "" + @item.id;
             <div class="col-lg-6">
                 <div class="blog-text mt-0">
                     <a href="@url"> <img class="blog-two-img" style="width:100% ;height: 240px !important;" src="@item.photoURL" alt="@item.headline" /> </a>

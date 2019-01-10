@@ -41,6 +41,7 @@
                                 <th>Tác giả</th>
                                 <th style="width:10px"></th>
                                 <th style="width:10px"></th>
+                                <th style="width:10px"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,6 +52,9 @@
                                     <td>@item.headline</td>
                                     <td>@item.publishDate</td>
                                     <td>@item.byLine</td>
+                                    <td>
+                                        <a href="/Admin/NewsArticles/Details/@item.id" class="btnView"></a>
+                                    </td>
                                     <td>
                                         <a href="/Admin/NewsArticles/Edit/@item.id" class="btnEdit"></a>
                                     </td>

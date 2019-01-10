@@ -187,7 +187,38 @@ namespace Firefly.Areas.Admin.Controllers
         //        return false;
         //    }s
         //}
-
+        public ActionResult Details(int id)
+        {
+            var user = new NewsArticles().ViewDetail(id);
+            Models.ArticlesModel objArticle = new ArticlesModel();
+            // Parse data
+            objArticle.id = user.id;
+            objArticle.CategoryID = user.CategoryID;
+            objArticle.newsCategory = db.NewsCategories.Find(user.CategoryID).name;
+            objArticle.headline = user.headline;
+            objArticle.extract = user.extract;
+            objArticle.encoding = user.encoding;
+            objArticle.text = user.text;
+            objArticle.publishDate = user.publishDate;
+            objArticle.byLine = user.byLine;
+            objArticle.source = user.source;
+            objArticle.state = user.state;
+            //objArticle.clientQuote = user.clientQuote;
+            objArticle.createdDate = user.createdDate;
+            objArticle.lastModifiedDate = user.lastModifiedDate;
+            objArticle.htmlMetaDescription = user.htmlMetaDescription;
+            objArticle.htmlMetaKeywords = user.htmlMetaKeywords;
+            objArticle.htmlMetaLangauge = user.htmlMetaLangauge;
+            objArticle.tags = user.tags;
+            objArticle.priority = user.priority;
+            //objArticle.format = user.format;
+            objArticle.photoHtmlAlt = user.photoHtmlAlt;
+            //objArticle.photoWidth = user.photoWidth;
+            //objArticle.photoHeight = user.photoHeight;
+            objArticle.photoURL = user.photoURL;
+            ViewBag.Title = objArticle.headline;
+            return View(objArticle);
+        }
         [HttpDelete]
         public ActionResult Delete(int id)
         {

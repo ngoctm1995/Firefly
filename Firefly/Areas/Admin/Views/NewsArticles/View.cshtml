@@ -1,0 +1,189 @@
+﻿@model Model.EF.NewsArticle
+
+<h2>@Html.DisplayNameFor(model => model.headline)</h2>
+
+<div>
+    <h3>
+        @Html.DisplayNameFor(model => model.headline)</h3>
+    <dl class="dl-horizontal">
+        <dt>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.headline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.headline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.encoding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.encoding)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.publishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publishDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.byLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.byLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientQuote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientQuote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.createdDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.createdDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.htmlMetaDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.htmlMetaDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.htmlMetaKeywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.htmlMetaKeywords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.htmlMetaLangauge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.htmlMetaLangauge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tags)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.priority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.priority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.format)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.format)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photoHtmlAlt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photoHtmlAlt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photoWidth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photoWidth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photoHeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photoHeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photoURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photoURL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,11 @@
+﻿@model Firefly.Areas.Admin.Models.ArticlesModel
+
+<h2 style="font-size: 30px; color: #22b444">@Html.DisplayFor(model => model.headline)</h2>
+
+<div>
+    <p><b>Người viết: @Html.DisplayFor(model => model.byLine)</b></p>
+    <p>@Html.DisplayFor(model => model.text)</p>
+    <img src="@Html.DisplayFor(model => model.photoURL)" />
+    <p>(<i>Nguồn: @Html.DisplayFor(model => model.source)</i>)</p>
+    <p><i>Sửa cuối: @Html.DisplayFor(model => model.lastModifiedDate)</i></p>
+</div>
